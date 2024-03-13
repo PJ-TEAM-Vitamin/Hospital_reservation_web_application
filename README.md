@@ -49,3 +49,4 @@ footer(옵션)                         // 꼬리말
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2024-02-27 | [프로젝트 주제 선정](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/1)                                      |
 | 2024-03-06 | [화면 구성 및 ERD 정의 및 라이브러리 선정, Git 전략 정의](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/2) |
+| 2024-03-13 | [일정 정리 및 기본 작업 진행 예정](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/3) |
