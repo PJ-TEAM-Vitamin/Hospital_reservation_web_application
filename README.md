@@ -26,18 +26,19 @@ footer(옵션)                         // 꼬리말
 
 ## 커밋 메시지 헤더
 
-- 문서 및 참조 파일 수정시 (readme.md 등)
-  - Write: 작성 및 추가
-  - Update: 수정
-  - Delete: 삭제
-- 기능 관련
-  - Feat: 기능 추가
-  - Modify: 기능 수정
-  - Fix: 버그 수정, 오류 수정
-  - Remove: 기능 제거
-- 기타
-  - Merge: 코드 병합 (문서도)
-  - Rename: 파일 및 폴더 수정
+| Tag Type | content                        |
+| -------- | ------------------------------ |
+| `Write`  | 문서 및 참조 파일 작성 및 추가 |
+| `Update` | 문서 및 참조 파일 수정         |
+| `Delete` | 문서 및 참조 파일 삭제         |
+| `Feat`   | 기능 추가                      |
+| `Modify` | 기능 수정                      |
+| `Fix`    | 버그 수정                      |
+| `Remove` | 기능 제거                      |
+| `Test`   | 테스트 코드 작성               |
+| `Style`  | 포맷팅 수정                    |
+| `Merge`  | 코드 병합                      |
+| `Rename` | 파일 및 폴더 수정              |
 
 ## 간략 브랜치 전략
 
@@ -49,4 +50,4 @@ footer(옵션)                         // 꼬리말
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | 2024-02-27 | [프로젝트 주제 선정](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/1)                                      |
 | 2024-03-06 | [화면 구성 및 ERD 정의 및 라이브러리 선정, Git 전략 정의](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/2) |
-| 2024-03-13 | [일정 정리 및 기본 작업 진행 예정](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/3) |
+| 2024-03-13 | [일정 정리 및 기본 작업 진행 예정](https://github.com/PJ-TEAM-Vitamin/Hospital_reservation_web_application/issues/3)                        |
