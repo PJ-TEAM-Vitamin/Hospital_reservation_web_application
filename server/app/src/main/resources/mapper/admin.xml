@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.vitamin.app.mapper.AdminMapper">
+    <!-- admin 로그인 -->
+    <select id="admin_login" resultType="com.vitamin.app.dto.AdminDto">
+        SELECT * FROM admin WHERE admin_id=#{admin_id}
+    </select>
+
+    <!-- closed 수정 -->
+    <update id="updateClosed" parameterType="com.vitamin.app.dto.ClosedDto">
+        update closed set title = #{title},
+        closed_date = #{closed_date}
+        where closed_id = #{closed_id}
+    </update>
+
+    <!-- 의사 정보 추가 -->
+    <insert id="insertDoctor" parameterType="com.vitamin.app.dto.DoctorDto">
+        insert into doctor
+        values( #{doctor_id},
+        #{email},
+        #{name},
+        #{gender},
+        #{birthdate},
+        #{phone},
+        #{address},
+        #{banned},
+        #{sign_out},
+        #{created_at},
+        #{updated_at},
+        #{hospital_id})
+    </insert>
+
+    <!-- 의사 정보 수정 -->
+    <update id = "updateDoctor" parameterType="com.vitamin.app.dto.DoctorDto">
+        UPDATE doctor SET email = #{email}
+        , name = #{name}
+        , gender = #{gender}
+        , birthdate = #{birthdate}
+        , phone = #{phone}
+        , address = #{address}
+        , banned = #{banned}
+        , updated_at = #{updated_at}
+        WHERE doctor_id = #{doctor_id}
+    </update>
+
+</mapper>

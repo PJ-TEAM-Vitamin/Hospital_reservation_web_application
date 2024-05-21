@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.vitamin.app.mapper.UserMapper">
+    <!-- 회원가입 -->
+    <insert id="insertUser" parameterType="com.vitamin.app.dto.UserDto">
+        insert into user
+        values( #{user_id},
+        #{password},
+        #{nickname},
+        #{email},
+        #{name},
+        #{gender},
+        #{birthdate},
+        #{phone},
+        #{address},
+        #{banned},
+        #{sign_out},
+        #{created_at},
+        #{updated_at},
+        #{hospital_id})
+    </insert>
+
+    <!-- 회원정보 수정 -->
+    <update id = "updateUser" parameterType="com.vitamin.app.dto.UserDto">
+        UPDATE user SET password = #{password}
+        , nickname = #{nickname}
+        , email = #{email}
+        , name = #{name}
+        , gender = #{gender}
+        , birthdate = #{birthdate}
+        , phone = #{phone}
+        , address = #{address}
+        , banned = #{banned}
+        , sign_out = #{sign_out}
+        , created_at = #{created_at}
+        , updated_at = #{updated_at}
+        WHERE user_id = #{user_id}
+    </update>
+
+    <!-- 회원정보 삭제 -->
+    <delete id="deleteUser">
+        delete from user where user_id = #{user_id}
+    </delete>
+
+    <!-- 로그인 -->
+    <select id="login" resultType="com.vitamin.app.dto.UserDto">
+        SELECT * FROM user WHERE user_id=#{user_id}
+    </select>
+
+    <!-- medication 정보 입력 -->
+    <insert id="insertMedication" parameterType="com.vitamin.app.dto.MedicationDto">
+        insert into medication
+        values( #{medication_id},
+        #{name},
+        #{manufacturer},
+        #{user_id})
+    </insert>
+
+    <!-- disease 정보 입력 -->
+    <insert id="insertDisease" parameterType="com.vitamin.app.dto.DiseaseDto">
+        insert into disease
+        value( #{disease_id},
+        #{name},
+        #{user_id})
+    </insert>
+
+
+
+</mapper>
